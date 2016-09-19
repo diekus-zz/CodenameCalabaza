@@ -3,7 +3,8 @@
 <head>
     <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
     <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
-
+    <script src="j/svrbutton_helper.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
     <script src="j/svrframe.js"></script>
     <script src="j/svrbutton.js"></script>
 </head>
@@ -12,11 +13,19 @@
     <a-scene>
         <a-assets>
         </a-assets>
-        <!--a-sky color="#3B3B3B"></a-sky-->
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
+        <a-sky color="#3B3B3B"></a-sky>
+        <!--<a-entity id="specbmfont" bmfont-text-wrapper="textParams:text:hola;color:#fff"></a-entity>-->
+        <!--<a-entity id="basicbmfont" bmfont-text-wrapper></a-entity>-->
         <!--a-entity id="myframe" svrframe="bgImage:i/cariblanco.jpg; height:8; width:10" position="0 0 -10"></a-entity-->
-        <a-entity id="mybutton" svrbutton position="0 0 -5">
-            <!--a-entity id="mybuttontext" bmfont-text="text: button; color:#ffffff; align:left;" position="0 0 1" scale="4 4 4"></a-entity-->
-        </a-entity>
+        <!--<a-box material="color: green;" onclick="console.log('hola')" id="mybutton" position="0 0 -5" depth="0.3" height="1.5" width="3">-->
+            
+            <!--<a-entity id="mybuttontext" bmfont-text="text:hola; color:#ffffff; align:left;" position="0 3 -4.5" scale="4 4 4"></a-entity-->-->
+        <!--</a-entity>-->
+        <!--<a-entity text="text: What's up" position="0 3 -5"></a-entity>-->
+        <a-svrbutton id="mybutton" position="0 0 -5" text="peter" btnTweaks></a-svrbutton>
     </a-scene>
 </body>
 </html>
