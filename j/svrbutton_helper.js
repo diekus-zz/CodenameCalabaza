@@ -1,21 +1,18 @@
 //svrbutton helper
-AFRAME.registerComponent('btnTweaks', {
+AFRAME.registerComponent('btntweaks', {
 	schema: {
-		textPosition: {
+		textposition: {
 			type: 'vec3',
 			default:'0, 0, 0.5'
 		},
-		textScale:{
+		textscale:{
 			type:'vec3',
 			default: '4, 4, 1'
 		},
-		textOffset:{
+		textoffset:{
 			type:'number',
 			default:0.2
 		}
-	},
-	init: function(){
-		console.log('in btntweaks');
 	},
 	tick: function () {
 		if (
@@ -25,13 +22,13 @@ AFRAME.registerComponent('btnTweaks', {
 			this.text = this.el.getObject3D('bmfont-text');
 			if (this.text) {
 
-				this.text.position.copy(this.data.textPosition);
-				this.text.scale.multiply(this.data.textScale);
+				this.text.position.copy(this.data.textposition);
+				this.text.scale.multiply(this.data.textscale);
 				
 				this.el.object3D.children[0].geometry.computeBoundingBox();
 				var text_bbox = this.el.object3D.children[0].geometry.boundingBox;
 				var distCenter = (text_bbox['max'].x - text_bbox['min'].x)/2;
-				this.text.translateX(distCenter + this.data.textOffset);
+				this.text.translateX(distCenter + this.data.textoffset);
 			}
 		}
 	}

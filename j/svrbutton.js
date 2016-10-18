@@ -19,10 +19,10 @@ AFRAME.registerPrimitive('a-svrbutton', {
             align: 'left',
 			width:500
 		},
-		btnTweaks: {
-			textPosition: '0 0 0.5',
-			textScale: '4 4 1',
-			textOffset: 0.2
+		btntweaks: {
+			textposition: '0 0 0.5',
+			textscale: '4 4 1',
+			textoffset: 0.2
 		}
 	},
 	mappings:{
@@ -32,8 +32,8 @@ AFRAME.registerPrimitive('a-svrbutton', {
 		color:'material.color',
 		opacity:'material.opacity',
 		text: 'bmfont-text.text',
-		"text-offset": 'btnTweaks.textOffset',
-		"text-position": 'svrbutton.textPosition',
-		"text-scale": 'svrbutton.textScale'
+		textoffset: 'btnTweaks.textoffset',
+		textposition: 'btnTweaks.textposition',
+		textscale: 'btnTweaks.textscale'
 	}
 });
